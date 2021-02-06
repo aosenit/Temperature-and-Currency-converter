@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: magenta;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container{
+    background-color: white;
+    height: 70vh;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+h1{
+    padding-left: 5em;
+    font-size: 2em;
+}
+
+.add{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 1em;
+    font-size: 2.5em;
+    width: 50%;
+    
+}
+
+label{
+    margin-right: 1em;
+    justify-self: flex-end;
+    color: magenta;
+}
+
+input{
+    text-align: center;
+    width: 10em;
+    justify-items: center;
+    font-size: .5em;
+    font-weight: bolder;
+    color: magenta;
+}
+::placeholder{
+    color: magenta;
+}
+
+
+.two{
+    position: absolute;
+    z-index: -10;
+}
+
+.show{
+    z-index: 11;
+}
+
+button{
+    position: fixed;
+    top: 5%;
+    left: 40%;
+    padding: 2em 10em;
+    border-radius: 10px;
+    color: magenta;
+    background-color: white;
+    border: none;
+
+}
+
+h5{
+    font-size: 2em;
+}
