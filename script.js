@@ -57,7 +57,27 @@ for (let i = 0; i < inputs.length; i++) {
     })
 }
 
-const sectionTwo = document.querySelector('.two')
-document.querySelector('button').addEventListener('click', ()=> {
-    sectionTwo.classList.toggle('show')
+const changeConverter = document.querySelector('.switch')
+const reloadConverter = document.querySelector('.reload')
+
+const TemperatureCon = document.querySelector('.one')
+const CurrencyCon = document.querySelector('.two')
+
+let count = 2
+changeConverter.addEventListener('click', () =>{
+  count++
+  if (count % 2 == 1) {
+    TemperatureCon.style.right = '-100%'
+    CurrencyCon.style.right = '4.7em'
+  }
+  else{
+    TemperatureCon.style.right = '4.7em'
+    CurrencyCon.style.right = '-100%'
+  }
+})
+
+reloadConverter.addEventListener('click', () => {
+  inputs.forEach(input => {
+    input.value = ''
+  })
 })
