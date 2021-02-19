@@ -8,7 +8,7 @@ body{
     background-color: #777;
     font-size: 12px;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,14 +19,14 @@ body{
 .wrapper{
     background-color: white;
     width: 60%;
-    height: 70%;
+    height: 600px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column-reverse;
     position: relative;
     border-radius: 20px;
-    
+    max-width: 1440px;
     overflow: hidden;
 }
 
@@ -38,16 +38,20 @@ button{
     border: none;
     border-radius: 5px;
     position: absolute;
-    bottom: 46%;
+   
    
 }
 
 .switch{
-    left: 1em;
+    left: 45%;
+    top: 5%;
+    
 }
 
 .reload{
-    right: 1em;
+    right: 45%;
+    bottom: 10%;
+    
 }
 button:hover{
     color: rgb(23, 23, 24);
@@ -57,6 +61,7 @@ button:hover{
 }
 
 .container{
+   
     width: 80%;
     height: 350px;
     background-color: #111;
@@ -90,4 +95,42 @@ input{
     text-align: left;
     padding-left: 5em;
     padding: .3em;
+}
+
+@media screen and (max-width: 900px){
+    .wrapper{
+        height: 500px;
+        width: 280px;
+        margin: 0 auto;
+        font-size: 6px;
+
+    }
+
+    .container{
+        width: 90%;
+        height: 85%;
+        font-size: 1.9em;
+    }
+
+    .add{
+        height: 45px;
+        align-items: center;
+    }
+
+    button{
+        padding: .5em 1em;    
+        
+       
+    }
+    
+    .switch{
+        left: 100px;
+        top: .5em;
+        bottom: unset;
+    }
+    
+    .reload{
+        right: 100px;
+        bottom: .5em;
+    }
 }

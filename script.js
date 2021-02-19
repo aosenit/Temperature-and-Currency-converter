@@ -62,17 +62,26 @@ const reloadConverter = document.querySelector('.reload')
 
 const TemperatureCon = document.querySelector('.one')
 const CurrencyCon = document.querySelector('.two')
-
+const container = document.querySelector('.container')
+console.log(container.offsetWidth)
 let count = 2
 changeConverter.addEventListener('click', () =>{
   count++
   if (count % 2 == 1) {
     TemperatureCon.style.right = '-100%'
-    CurrencyCon.style.right = '4.7em'
+    if (container.offsetWidth == '252') {
+      CurrencyCon.style.right = '5%'
+    }else {
+      CurrencyCon.style.right = '3.8em'
+    }
   }
   else{
-    TemperatureCon.style.right = '4.7em'
     CurrencyCon.style.right = '-100%'
+    if (container.offsetWidth == '252') {
+      TemperatureCon.style.right = '5%'
+    } else {
+       TemperatureCon.style.right = '3.8em'
+    } 
   }
 })
 
